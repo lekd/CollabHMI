@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,6 +62,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HMIScreenController.cs" />
+    <Compile Include="TooltipController.cs" />
+    <Compile Include="TooltipUC.xaml.cs">
+      <DependentUpon>TooltipUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,8 +80,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TooltipUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MiniMapController.cs" />
     <Compile Include="MouseEventMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -105,6 +117,19 @@
     <Resource Include="Resources\HMIBackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackCursor.png" />
+    <Resource Include="Resources\WhiteCursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TooltipBKG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TooltipBKG_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DummyAvatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

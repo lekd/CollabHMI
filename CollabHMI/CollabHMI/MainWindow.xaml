@@ -16,5 +16,35 @@
                MouseLeave="imgHMIBkg_MouseLeave"
                MouseMove="imgHMIBkg_MouseMove"/>
         <Label x:Name="lbldebugText" Grid.Row="1" Content="Debug text"/>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="miniMap" Grid.Row="3" Grid.Column="3" Grid.RowSpan="2"/>
+            <local:TooltipUC x:Name="tooltipRemoteUser" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Visibility="Hidden"/>
+            
+            <Grid x:Name="AvatarArea" Grid.Row="4" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33*"/>
+                    <ColumnDefinition Width="0.33*"/>
+                    <ColumnDefinition Width="0.33*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgRemoteUserAvatar" Grid.Row="0" Source="Resources/DummyAvatar.png"
+                       MouseEnter="imgRemoteUserAvatar_MouseEnter"
+                       MouseLeave="imgRemoteUserAvatar_MouseLeave"
+                       MouseDown="imgRemoteUserAvatar_MouseDown"/>
+            </Grid>
+        </Grid>
     </Grid>
+    
 </Window>
