@@ -1,0 +1,13 @@
+{
+  "name": "duy-gaze-answers",
+  "version": "0.0.1",
+  "private": true,
+  "main": "http://localhost:3003",
+  "node-main": "app.js",
+  "dependencies": {
+    "express": "latest",
+    "internal-ip": "^4.3.0",
+    "ip": "^1.1.5",
+    "ws": "latest"
+  }
+}

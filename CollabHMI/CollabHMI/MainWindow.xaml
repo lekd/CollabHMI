@@ -1,0 +1,20 @@
+﻿<Window x:Class="CollabHMI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollabHMI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imgHMIBkg" Grid.Row="0" Grid.Column="0" Source="Resources/HMIBackground.png" 
+               MouseEnter="imgHMIBkg_MouseEnter"
+               MouseLeave="imgHMIBkg_MouseLeave"
+               MouseMove="imgHMIBkg_MouseMove"/>
+        <Label x:Name="lbldebugText" Grid.Row="1" Content="Debug text"/>
+    </Grid>
+</Window>
